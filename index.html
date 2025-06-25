@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu,toggle_off,toggle_on" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="script.js"></script>
+    
     <title>My Website</title>
 </head>
 
@@ -63,16 +63,24 @@
             <p class="text-2xl p-[2vh] text-gray-600 font-medium text-center">
                 Hello I am Shweta a high-schooler from India and I am interested in web-development and watching webseries.
             </p>
-            <button class="text-[1.2rem] m-b-[2vh] rounded-[5px] max-h-fit-content font-medium p-[1rem] text-white border-white border-0px bg-green-400 hover:text-red-400 hover:bg-green-500 hover:cursor-pointer">
+            <a href="https://github.com/ShwetaShaw76?tab=repositories"><button class="text-[1.2rem] m-b-[2vh] rounded-[5px] max-h-fit-content font-medium p-[1rem] text-white border-white border-0px bg-green-400 hover:text-red-400 hover:bg-green-500 hover:cursor-pointer">
                 View Projects >
-            </button>
+            </button></a>
         </div>
     </div>
     <div class="border-[0.125px] border-gray-400 m-b-[5vh] shadow-[0px 0px 10px 0px] shadow-gray-400">
         <nav class="bg-linear-to-b from-green-600 to-green-400 p-[2vh] flex flex-row items-center text-[1.3rem] font-medium text-black">
             Projects
         </nav>
-        <ul class="p-[2vh] w-full flex items-center text-[1.5rem]"></ul>
+        <ul class="p-[2vh] w-full flex flex-row items-center text-[1.5rem] justify-center">
+            <button class="next p-[0.5vw] m-[10px] text-6xl rounded-[20px] bg-green-400 flex justify-center items-center hover:cursor-pointer"> < </button>
+            <li><a href="https://background-mania.vercel.app/"><img class="img md:max-w-[60vw] min-w-[60vw]" src="background.png" alt=""></a></li>
+            <li><a href="https://bowling-bounty.vercel.app/"><img class="img hidden md:max-w-[60vw] min-w-[60vw]" src="bowling.png" alt=""></a></li>
+            <li><a href="https://minus-twelve.vercel.app/"><img class="img hidden md:max-w-[60vw] min-w-[60vw]" src="Image_generator.png" alt=""></a></li>
+            <li><a href="https://to-do-list-zeta-two-58.vercel.app/"><img class="img hidden md:max-w-[60vw] min-w-[60vw]" src="list.png" alt=""></a></li>
+            <li><a href="https://tic-tac-toe-game-wheat-eta.vercel.app/"><img class="img hidden md:max-w-[60vw] min-w-[60vw]" src="tic-tac-toe.png" alt=""></a></li>
+            <button class="hidden prev p-[0.5vw] m-[10px] text-6xl rounded-[20px] bg-green-400 flex justify-center items-center hover:cursor-pointer"> > </button>
+        </ul>
     </div>
     <div class="border-[0.125px] border-gray-400 mb-[3vh]">
         <nav class="bg-linear-to-b from-green-600 to-green-400 p-[2vh] flex flex-row items-center text-[1.3rem] font-medium text-black">
@@ -80,15 +88,24 @@
         </nav>
     </div>
     <div class="flex justify-space-evenly items-center bg-gray-300/70 p-[0.25rem] m-b-[3vh]">
-        <button class="border-none rounded-[5px] w-full h-full bg-grey-200 text-[1.25rem] p-[0.5rem]">My Hobbies</buttton>
-        <button class="border-none rounded-[5px] w-full h-full bg-grey-200 text-[1.25rem] p-[0.5rem]">My Interests</button>
-        <button class="border-none rounded-[5px] w-full h-full bg-grey-200 text-[1.25rem] p-[0.5rem]">My strengths</button>
+        <button onclick="writecomment(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer"> Post Comment</button>
+        <button onclick="showcomment(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer"> Read Comments </button>
+        <button onclick="thanks(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer">Thank you Note</button>
     </div>
-    <ul class="famous">
-        <li><div class="1">1</div></li>
-        <li><div class="2">2</div></li>
-        <li><div class="3">3</div></li>
-    </ul>
+    <div class="text">
+    <input type="text" placeholder="Enter your comment here" class="w-[90%] p-[1rem] m-[2vh] border-[0.125px] border-gray-400 rounded-[5px] text-[1.2rem]">
+    <button class="post bg-green-400 p-[1vh] m-[1vh] rounded-[10px] text-3xl self-end-safe hover:bg-green-700 hover:text-white hover:cursor-pointer"> POST </button>
+    <div class="comments hidden bg-gray-300">
+        <ul class="comment flex flex-col items-center justify-center text-xl gap-2vh font-medium">
+
+        </ul>
+
+    </div>
+    <div class="note hidden flex items-center justify-center p-[2vw] text-2xl text-center font-medium">
+        I thank you for taking the time to visit my website and I hope you liked it. If you have any suggestions or comments, please feel free to comment it here. 
+    </div>
+    
+    </div>
 
     <div class="bg-linear-to-b from-green-600 to-green-400 p-[2vh] flex flex-row items-center justify-evenly text-[1.1rem] font-medium text-black">
         <a href="" class="text-white hover:text-red-600">
@@ -104,6 +121,8 @@
     <div class="bg-black text-white flex items-center justify-center p-[5vh] text-center">
         I really enjoyed making this project. I was already learning HTML, CSS and Javascript.Learning tailwind as a better way of writing css really fascinated me and I think I'm going to be using taiwind more frequently as I found it easy to use and more effective.
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
