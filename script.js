@@ -5,7 +5,6 @@ img=document.querySelectorAll(".img")
 post=document.querySelector(".post")
 w_comment=document.querySelector(".w-comment")
 comments=document.querySelector(".comments")
-ty=document.querySelector(".note")
 dark=document.querySelector(".dark")
 dark.addEventListener("click", function () {
     light.classList.remove("hidden");
@@ -18,6 +17,12 @@ light.addEventListener("click", function () {
     light.classList.add("hidden");
     document.body.classList.remove("dark")
 });
+
+function showcomment(e){
+    post.classList.add("hidden");
+    w_comment.classList.add("hidden");
+    comments.classList.remove("hidden");
+}
 
 
 
