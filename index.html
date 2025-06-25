@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu,toggle_off,toggle_on" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+    <style type="text/tailwindcss">
+  /* Class based dark mode */
+  @variant dark (&:where(.dark, .dark *));
+</style>
     <title>My Website</title>
 </head>
 
-<body>
+<body class="dark:bg-black">
     <nav class="p-[2.5vh] flex justify-between items-center mb-[5vh] bg-linear-to-b from-green-700 to-green-400">
         <div class="nav-links duration-500 md:static md:min-h-fit absolute md:bg-transparent bg-green-400 min-h-[100vh] left-0 top-[-100%] w-[60%] md:w-auto flex items-center px-5">
             <ul class="flex md:flex-row flex-col md:items-center md:gap-[7vw] gap-8">
@@ -29,12 +32,16 @@
         </div>
         
     <div class="flex justify-evenly">
-    <div class="flex pr-[2rem] flex-column justify-center items-center">
+    <div class="text flex pr-[2rem] flex-column justify-center items-center">
         DARK?
-    <div class="p-[0.25vw] pr-[2vw] backdrop-blur-[5px] bg-gray-400 rounded-[50px] flex items-center">
+    <div class="dark p-[0.25vw] pr-[2vw] backdrop-blur-[5px] bg-gray-400 rounded-[50px] flex items-center">
     <div class="size-[3vh] rounded-full bg-stone-800 relative flex justify-center items-center transition-all duration-[0.5s] ease-in-out">
     <img class="dl rounded-full w-full" src="https://static.vecteezy.com/system/resources/previews/018/251/174/non_2x/flat-style-crescent-moon-on-transparent-background-free-png.png" alt="">
     </div>
+    </div>
+    <div class="light p-[0.25vw] pr-[2vw] backdrop-blur-[5px] bg-white rounded-[50px] flex justify-end items-end hidden">
+    <div class="translate-x-full size-[3vh] rounded-full bg-stone-800 relative flex justify-center items-center transition-all duration-[0.5s] ease-in-out">
+    <img class="dl rounded-full w-fit-content " src="https://www.pngall.com/wp-content/uploads/15/Cartoon-Sun-PNG-Images.png" alt="">
     </div>
     </div>
     <div class="h-[5vh] flex justify-center items-center rounded-full">
@@ -56,11 +63,11 @@
                 </button>
             </div>
         </nav>
-        <div class="flex flex-col shadow-[10px] shadow-gray-400 justify-center items-center">
+        <div class="dark:bg-black dark:text-white flex flex-col shadow-[10px] shadow-gray-400 justify-center items-center">
             <div class="h-fit-content">
                 <img class="w-full h-full object-cover rounded-b-[10px] p-2vh" src="https://media1.tenor.com/images/90975d9b5cc7a3b48147514308fd1e17/tenor.gif?itemid=8390761" alt="About Me Image">
             </div>
-            <p class="text-2xl p-[2vh] text-gray-600 font-medium text-center">
+            <p class="dark:text-white text-2xl p-[2vh] text-gray-600 font-medium text-center">
                 Hello I am Shweta a high-schooler from India and I am interested in web-development and watching webseries.
             </p>
             <a href="https://github.com/ShwetaShaw76?tab=repositories"><button class="text-[1.2rem] m-b-[2vh] rounded-[5px] max-h-fit-content font-medium p-[1rem] text-white border-white border-0px bg-green-400 hover:text-red-400 hover:bg-green-500 hover:cursor-pointer">
@@ -72,7 +79,7 @@
         <nav class="bg-linear-to-b from-green-600 to-green-400 p-[2vh] flex flex-row items-center text-[1.3rem] font-medium text-black">
             Projects
         </nav>
-        <ul class="p-[2vh] w-full flex flex-row items-center text-[1.5rem] justify-center">
+        <ul class="dark:bg-black p-[2vh] w-full flex flex-row items-center text-[1.5rem] justify-center">
             <button class="next p-[0.5vw] m-[10px] text-6xl rounded-[20px] bg-green-400 flex justify-center items-center hover:cursor-pointer"> < </button>
             <li><a href="https://background-mania.vercel.app/"><img class="img md:max-w-[60vw] min-w-[60vw]" src="background.png" alt=""></a></li>
             <li><a href="https://bowling-bounty.vercel.app/"><img class="img hidden md:max-w-[60vw] min-w-[60vw]" src="bowling.png" alt=""></a></li>
@@ -92,8 +99,8 @@
         <button onclick="showcomment(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer"> Read Comments </button>
         <button onclick="thanks(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer">Thank you Note</button>
     </div>
-    <div class="text">
-    <input type="text" placeholder="Enter your comment here" class="w-[90%] p-[1rem] m-[2vh] border-[0.125px] border-gray-400 rounded-[5px] text-[1.2rem]">
+    <div class="w_comment">
+    <input type="text" placeholder="Enter your comment here" class="w-[90%] p-[1rem] m-[2vh] border-[0.125px] border-gray-400 rounded-[5px] text-[1.2rem] dark:text-white dark:bg-gray-700">
     <button class="post bg-green-400 p-[1vh] m-[1vh] rounded-[10px] text-3xl self-end-safe hover:bg-green-700 hover:text-white hover:cursor-pointer"> POST </button>
     <div class="comments hidden bg-gray-300">
         <ul class="comment flex flex-col items-center justify-center text-xl gap-2vh font-medium">

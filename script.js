@@ -3,6 +3,22 @@ nxt=document.querySelector(".next")
 prev=document.querySelector(".prev")
 img=document.querySelectorAll(".img")
 post=document.querySelector(".post")
+w_comment=document.querySelector(".w-comment")
+comments=document.querySelector(".comments")
+ty=document.querySelector(".note")
+dark=document.querySelector(".dark")
+dark.addEventListener("click", function () {
+    light.classList.remove("hidden");
+    dark.classList.add("hidden");
+    document.body.classList.add("dark")
+});
+light=document.querySelector(".light")
+light.addEventListener("click", function () {
+    dark.classList.remove("hidden");
+    light.classList.add("hidden");
+    document.body.classList.remove("dark")
+});
+
 
 
 let i = 0; 
