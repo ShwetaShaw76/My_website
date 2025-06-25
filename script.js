@@ -2,9 +2,7 @@ nav=document.querySelector(".nav-links")
 nxt=document.querySelector(".next")
 prev=document.querySelector(".prev")
 img=document.querySelectorAll(".img")
-post=document.querySelector(".post")
-w_comment=document.querySelector(".w-comment")
-comments=document.querySelector(".comments")
+
 dark=document.querySelector(".dark")
 dark.addEventListener("click", function () {
     light.classList.remove("hidden");

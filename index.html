@@ -9,7 +9,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <style type="text/tailwindcss">
-  /* Class based dark mode */
   @variant dark (&:where(.dark, .dark *));
 </style>
     <title>My Website</title>
@@ -17,10 +16,10 @@
 
 <body class="dark:bg-black">
     <nav class="p-[2.5vh] flex justify-between items-center mb-[5vh] bg-linear-to-b from-green-700 to-green-400">
-        <div class="nav-links duration-500 md:static md:min-h-fit absolute md:bg-transparent bg-green-400 min-h-[100vh] left-0 top-[-100%] w-[60%] md:w-auto flex items-center px-5">
+        <div class="nav-links duration-500 md:static md:min-h-fit absolute md:bg-transparent bg-green-400 min-h-[100vh] left-0 top-[-110%] w-[60%] md:w-auto flex items-center px-5">
             <ul class="flex md:flex-row flex-col md:items-center md:gap-[7vw] gap-8">
                 <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">Home</a></button></li>
-                <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">Comment</a></button></li>
+                <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">Comments</a></button></li>
                 <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">👉Support Me</a></button></li>
             </ul>
             
@@ -94,30 +93,42 @@
             Comments
         </nav>
     </div>
-    <div class="flex justify-space-evenly items-center bg-gray-300/70 p-[0.25rem] m-b-[3vh]">
-        <button onclick="writecomment(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer"> Post Comment</button>
-        <button onclick="showcomment(this)" class=" border-none rounded-[5px] w-full h-full bg-gray-200 text-[1.25rem] p-[0.5rem] hover:bg-black hover:text-white hover:cursor-pointer"> Read Comments </button>
-    </div>
-    <div class="w_comment">
-        <input type="text" placeholder="Enter your comment here" class="  w-[90%] p-[1rem] m-[2vh] border-[0.125px] border-gray-400 rounded-[5px] text-[1.2rem] dark:text-white dark:bg-gray-700">
-        <button class="post bg-green-400 p-[1vh] m-[1vh] rounded-[10px] text-3xl self-end-safe hover:bg-green-700 hover:text-white hover:cursor-pointer"> POST </button>
-    </div>
-    <div class="comments hidden bg-gray-300">
-        <ul class="comment flex flex-col items-center justify-center text-xl gap-2vh font-medium">
-
+    <div class="flex justify-evenly items-center bg-gray-300/70 p-[0.25rem] mb-[3vh]">
+        <ul class="flex flex-row items-center justify-evenly text-2xl">
+            <li class="flex flex-col items-center text-center border-[0.125px] border-gray-400 rounded-[10px] p-[2rem] m-[1rem] dark:bg-gray-700 dark:text-white">
+                <img src="https://th.bing.com/th/id/OIP.Na9wWcldVlq8qDES54pzsAAAAA?rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="" class="rounded-full h-[200px] w-[200px]">
+                <h1 class="text-4xl text-red-500 font-medium p-[2vh] dark:text-red-500">Summer Gung</h1>
+                i couldn't leave your website before suggesting you to add a dark mode toggle. It would be great for users who prefer a darker interface.
+            </li>
+            <li class="flex flex-col items-center text-center border-[0.125px] border-gray-400 rounded-[10px] p-[2rem] m-[1rem] dark:bg-gray-700 dark:text-white">
+                <img src="https://thumbs.dreamstime.com/b/portrait-young-handsome-american-man-hot-summer-new-yor-wearing-white-v-neck-t-shirt-short-hair-91890984.jpg" alt="" class="rounded-full h-[200px] w-[200px]">
+                <h1 class="text-4xl text-red-500 font-medium p-[2vh]">John Doe</h1>
+                Your website is amazing! The design is sleek and the content is engaging. Keep up the great work!
+            </li>
+            <li class="flex flex-col items-center text-center border-[0.125px] border-gray-400 rounded-[10px] p-[2rem] m-[1rem] dark:bg-gray-700 dark:text-white">
+                <img src="https://th.bing.com/th/id/OIP.mHMFKX6JNrSsI-JobQ_mywHaLG?rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="" class="rounded-full h-[200px] w-[200px]">
+                <h1 class="text-4xl text-red-500 font-medium p-[2vh]">Jane Smith</h1>
+                I love the color scheme of your website. It's visually appealing and easy to navigate. Great job!
+            </li>
+            <li class="flex flex-col items-center text-center border-[0.125px] border-gray-400 rounded-[10px] p-[2rem] m-[1rem] dark:bg-gray-700 dark:text-white">
+                <img src="https://media.istockphoto.com/id/1193702673/photo/argentinian-senior-man-portrait.jpg?s=170667a&w=0&k=20&c=PU5X81yr9oKLZZN_xFk2uomUmmVa6SmjwZxEeK-ygeM=" alt="" class="rounded-full h-[200px] w-[200px]">
+                <h1 class="text-4xl text-red-500 font-medium p-[2vh]">Alex Johnson</h1>
+                The responsiveness of your website is impressive. It looks great on both desktop and mobile devices.
+            </li>
         </ul>
     </div>
     
     
+    
 
     <div class="bg-linear-to-b from-green-600 to-green-400 p-[2vh] flex flex-row items-center justify-evenly text-[1.1rem] font-medium text-black">
-        <a href="" class="text-white hover:text-red-600">
+        <a href="index.html" class="text-white hover:text-red-600">
             Home
         </a>
-        <a href="" class="text-white hover:text-red-600">
+        <a href="https://github.com/ShwetaShaw76?tab=repositories" class="text-white hover:text-red-600">
             Projects
         </a>
-        <a href="" class="text-white hover:text-red-600">
+        <a href="https://en.wikipedia.org/wiki/Privacy_policy" class="text-white hover:text-red-600">
             Privacy Policy
         </a>
     </div>
