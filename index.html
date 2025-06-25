@@ -5,16 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu,toggle_off,toggle_on" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
     <title>My Website</title>
 </head>
 
 <body>
-    <nav class="p-[2.5vh] flex flex-row justify-between items-center mb-[5vh] bg-linear-to-b from-green-700 to-green-400">
-        <div class="menu">
-            <span class="material-symbols-outlined text-[3rem] cursor-pointer">
-                menu
-            </span>
+    <nav class="p-[2.5vh] flex justify-between items-center mb-[5vh] bg-linear-to-b from-green-700 to-green-400">
+        <div class="nav-links duration-500 md:static md:min-h-fit absolute md:bg-transparent bg-green-400 min-h-[100vh] left-0 top-[-100%] w-[60%] md:w-auto flex items-center px-5">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[7vw] gap-8">
+                <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">Home</a></button></li>
+                <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">Comment</a></button></li>
+                <li><button class="hover:bg-white text-white px-5 py-2 rounded-full hover:text-red-600"><a class="hover:text-red-600" href="">👉Support Me</a></button></li>
+            </ul>
+            
         </div>
+        
+        <div class="flex items-center gap-6">
+            <ion-icon name="menu-outline" onclick="onToggleMenu(this)" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            <button class="bg-[#a6c1ee] text-white px-5 py-2  rounded-full hover:bg-[#87acec] hover:text-red-600">Sign In</button>
+        </div>
+        
     <div class="flex justify-evenly">
     <div class="flex pr-[2rem] flex-column justify-center items-center">
         DARK?
@@ -33,7 +46,7 @@
         <nav class="bg-linear-to-b from-green-600 to-green-400 flex flex-row justify-between items-center p-[1rem] h-[5rem]">
             <div class="flex flex-column ml-[2vw] w-full h-75% items-baseline">
                 <span class="w-fit- bg-gray-100 border-[0.125px] border-gray-400 rounded-t-[10px] flex p-[1.2rem] justify-center items-center text-1.2rem font-bold text-gray-600">
-                    Latest Update
+                   About Me
                 </span>
             </div>
             <div class="flex flex-row justify-center items-center p-[0.5rem] h-full w-[15%]">
@@ -43,9 +56,16 @@
                 </button>
             </div>
         </nav>
-        <div class="flex flex-column items-center shadow-[10px] shadow-gray-400 justify-center">
-            <div class="h-[75vh]"></div>
-            <button class="text-[1.2rem] m-b-[2vh] rounded-[5px] font-medium p-[1rem] text-white border-white border-0px bg-green-700 hover:text-red-400 hover:cursor-pointer">View Projects ></button>
+        <div class="flex flex-col shadow-[10px] shadow-gray-400 justify-center items-center">
+            <div class="h-fit-content">
+                <img class="w-full h-full object-cover rounded-b-[10px] p-2vh" src="https://media1.tenor.com/images/90975d9b5cc7a3b48147514308fd1e17/tenor.gif?itemid=8390761" alt="About Me Image">
+            </div>
+            <p class="text-2xl p-[2vh] text-gray-600 font-medium text-center">
+                Hello I am Shweta a high-schooler from India and I am interested in web-development and watching webseries.
+            </p>
+            <button class="text-[1.2rem] m-b-[2vh] rounded-[5px] max-h-fit-content font-medium p-[1rem] text-white border-white border-0px bg-green-400 hover:text-red-400 hover:bg-green-500 hover:cursor-pointer">
+                View Projects >
+            </button>
         </div>
     </div>
     <div class="border-[0.125px] border-gray-400 m-b-[5vh] shadow-[0px 0px 10px 0px] shadow-gray-400">
@@ -56,7 +76,7 @@
     </div>
     <div class="border-[0.125px] border-gray-400 mb-[3vh]">
         <nav class="bg-linear-to-b from-green-600 to-green-400 p-[2vh] flex flex-row items-center text-[1.3rem] font-medium text-black">
-            Favourite Character
+            Comments
         </nav>
     </div>
     <div class="flex justify-space-evenly items-center bg-gray-300/70 p-[0.25rem] m-b-[3vh]">
